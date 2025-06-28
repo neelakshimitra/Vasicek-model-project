@@ -46,29 +46,69 @@ Simulations deviate from observed data, affirming the report's claim that Vasice
 This project replicated and interpreted the Vasicek interest rate model using both OLS and MLE estimation methods on US 3-month Treasury rate data (GS3M). The work builds on the methodology in the reference paper and compares the estimated model’s performance to historical observations.
 
 📈 OLS Estimation Results
+
 Regression: Fitted a basic OLS model to predict r_{t+1} from r_t.
+
 Estimated parameters:
+
 alpha ≈ 0.00048
+
 beta ≈ 0.98183
+
 R² ≈ 0.9903
+
 Converted to Vasicek form:
+
+
 a (speed of mean reversion): 4.5421
+
 b (long-term mean): 0.0265
+
 sigma (volatility): 0.0485
 
 🔹 Key Graphs
 
 Observed vs Fitted Δrₜ: Shows model fit over time.
+
 Residual Plot: Indicates heteroscedasticity, supporting the paper’s observation that OLS residuals violate homoskedasticity.
+
 Simulated Vasicek Path (OLS): Simulated rates deviated significantly from observed data, confirming OLS’s weakness in dynamic simulation.
 
+
 🔧 MLE Estimation Results
+
 Approach: Used Maximum Likelihood Estimation under the assumption that r_{t+1} | r_t ~ N(μ, Q), where μ and Q depend on the Vasicek parameters.
+
 Estimated parameters:
+
 a ≈ 5.07
+
 b ≈ 0.0262
+
 sigma ≈ 0.0536
 
 🔹 Key Graphs
 
 Simulated Vasicek Path (MLE): Closely followed historical interest rates. Demonstrated improved path realism and smoother convergence compared to the OLS simulation.
+
+
+Interpretation
+
+The results confirm the findings of the original report:
+
+OLS provides statistically strong point estimates but performs poorly in simulating future rate paths.
+MLE offers more realistic dynamics by properly capturing the variance structure, making it preferable for time-series simulation of stochastic processes.
+This hands-on replication deepened understanding of how interest rate models can be estimated and tested both analytically and through simulation.
+
+
+🗁 Outputs
+
+vasicek_estimates.csv: OLS and MLE parameter estimates
+
+vasicek_simulation.png: Simulation vs observed rates
+
+vasicek_mle_params.npz: Reusable MLE parameters for modeling
+
+📚 Reference
+
+Buffoli, A., & Rolfi, D. (2025). Estimation and Application of the Vasicek Interest Rate Model.
