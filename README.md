@@ -69,10 +69,13 @@ sigma (volatility): 0.0485
 ### 🔹 Key Graphs
 
 Observed vs Fitted Δrₜ: Shows model fit over time.
+![Observed vs Fitted Delta](ols_fitted_vs_observed_deltar.png)
 
 Residual Plot: Indicates heteroscedasticity, supporting the paper’s observation that OLS residuals violate homoskedasticity.
+![OLS Residuals](ols_residuals_timeseries.png)
 
 Simulated Vasicek Path (OLS): Simulated rates deviated significantly from observed data, confirming OLS’s weakness in dynamic simulation.
+![OLS Simulated vs Historical](ols_simulated_vs_historical.png)
 
 
 ### 🔧 MLE Estimation Results
@@ -90,6 +93,7 @@ sigma ≈ 0.0536
 ### 🔹 Key Graphs
 
 Simulated Vasicek Path (MLE): Closely followed historical interest rates. Demonstrated improved path realism and smoother convergence compared to the OLS simulation.
+![MLE Simulated vs Historical](mle_simulated_vs_historical.png)
 
 
 ## Interpretation
