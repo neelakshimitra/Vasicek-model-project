@@ -110,4 +110,5 @@ This hands-on replication deepened understanding of how interest rate models can
 
 ## 📚 Reference
 
-Buffoli, A., & Rolfi, D. (2025). Estimation and Application of the Vasicek Interest Rate Model.
+### Reference
+Buffoli, A., & Rolfi, D. (2025). Estimation and Application of the Vasicek Interest Rate Model. PDF included.
